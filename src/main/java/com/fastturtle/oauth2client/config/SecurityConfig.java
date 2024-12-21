@@ -18,6 +18,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                         )
                 .oauth2Login(oauth2 -> oauth2
+                        .loginPage("/oauth2/authorization/custom-client")
                         .defaultSuccessUrl("/home", true)
                         .failureUrl("/login?error=true") // Redirect to /login with error parameter on failure
                 );

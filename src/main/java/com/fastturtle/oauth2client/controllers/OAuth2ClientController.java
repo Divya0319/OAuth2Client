@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class OAuth2ClientController {
 
-    @GetMapping("/login/oauth2/code/custom-client")
+    @GetMapping("/login/oauth2/code/MyOAuth2Server")
     public String handleOAuth2Redirect(@RequestParam("code") String code) {
         return "Authorization code received: " + code;
     }
